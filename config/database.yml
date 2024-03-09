@@ -22,7 +22,6 @@ default: &default
   password: password
   host: db
 
-
 development:
   <<: *default
   database: app_development
@@ -83,6 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: app_production
-  username: app
-  password: <%= ENV["APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
