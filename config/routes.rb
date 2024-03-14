@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get 'test/gpt_code' => 'test#gpt_code'
+  root 'test#gpt_code'
 end
