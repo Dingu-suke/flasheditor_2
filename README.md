@@ -97,3 +97,43 @@ RUNTEQ生、及びその他プログラミング学習者
 Qiitaの記事を毎日確認し、数をこなす、という作業は骨が折れます。それに比べ、フラッシュカードは一つカードをこなせば次のカードを自動で表示します。また、記事を読むのは受け身になりがちかもしれません。しかし、コードエディタを使用し実際にコードを書くことは、受け身にならずに取り組むことができると考えています。(フラッシュカードにコードエディタを埋め込むので。)そのような点で、QiitaやZennの記事よりもフラッシュカードは優れていると言えます。
 (もちろん、フラッシュカードなのでコードを書かなくても答えを即座に確認できるようにしたいと考えております)
 
+---
+
+### ER図
+
+<img width="677" alt="image" src="https://github.com/Dingu-suke/portfolio/assets/139987339/ca888270-a73b-4ae2-83c2-362d2df2009d">
+
+
+- users ユーザー
+    - name ユーザー名
+    - プロフィール
+    - email メールアドレス
+    - Crypted_password パスワード（sorcery使用予定）
+- drafts 下書き
+    - 本文
+    - user_id 外部キー
+- likes 中間テーブル
+    - user_id
+    - post_id
+- psots 投稿
+    - title タイトル
+    - body 本文
+- folders フォルダ
+    - title タイトル
+    - tag_id 外部キー
+    - user_id 外部キー
+    - post_id 外部キー
+    - card_id 外部キー
+- cards カード
+    - folder_id 外部キー
+    - body 本文
+- tagfolders 中間テーブル
+    - tag_id
+    - folder_id
+- tags タグ
+    - folder_id 外部キー
+    - post_id 外部キー
+- tagposts 中間テーブル
+    - tag_id
+    - post_id
+
