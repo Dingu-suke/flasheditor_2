@@ -9,3 +9,7 @@ WORKDIR /app
 COPY Gemfile* /app/
 RUN bundle config --local set path 'vendor/bundle' \
   && bundle install
+  
+COPY . /app
+# local環境用のDockerfile
+# docker compose up 用
