@@ -1,0 +1,45 @@
+<%= javascript_pack_tag 'application' %>
+
+<select id="languageSelector">
+  <option value="ruby">Ruby</option>
+  <option value="html_ruby">Rails(html.erb)</option>
+  <!-- 他のオプションは省略 -->
+</select>
+
+<div id="editor" style="height: 200px; width: 100%;"></div>
+
+<%= javascript_pack_tag 'ace_editor' %>
+
+<script>
+// Ace Editorの読み込みが完了したら呼ばれる関数
+function aceLoaded() {
+  // 初期化と設定を行う関数
+  function initEditor(language) {
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/" + language);
+    editor.session.setUseSoftTabs(true);
+    editor.session.setTabSize(2);
+    return editor;
+  }
+
+  var languageSelector = document.getElementById('languageSelector');
+  var editor = initEditor(languageSelector.value);
+
+  // 言語選択の変更を監視
+  languageSelector.addEventListener('change', function() {
+    editor.session.setMode("ace/mode/" + this.value);
+  });
+
+  // Shift + Enterで回答を提出
+  editor.commands.addCommand({
+    name: "submitAnswer",
+    bindKey: {win: "Shift-Enter", mac: "Shift-Enter"},
+    exec: function(editor) {
+      // ここに回答を提出するためのコードを実装
+      // 例: Ankiの回答フィールドにエディタの内容をコピーする
+    }
+  });
+}
+// この関数は、ace.jsの読み込みが終わった後に自動的に呼ばれます。
+</script>

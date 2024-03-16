@@ -101,7 +101,9 @@ Qiitaの記事を毎日確認し、数をこなす、という作業は骨が折
 
 ### ER図
 
+
 ![image](https://github.com/Dingu-suke/portfolio/assets/139987339/dd20e849-031a-411c-82a8-7bab4036bdfc)
+
 
 
 - users ユーザー
@@ -137,11 +139,10 @@ Qiitaの記事を毎日確認し、数をこなす、という作業は骨が折
     - tag_id
     - post_id
 
----
-
 ### 画面遷移図
 
 リンク
 https://www.figma.com/file/MsDXqY4IuXWX7DL9K9BCrl/flasheditor?type=design&node-id=0-1&mode=design&t=rNfH4jiTs9ox8iaM-0
 
 <img width="958" alt="image" src="https://github.com/Dingu-suke/portfolio/assets/139987339/45cee565-b599-454c-a6ce-c542e0d33833">
+
