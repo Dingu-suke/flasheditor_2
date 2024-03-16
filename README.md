@@ -101,7 +101,8 @@ Qiitaの記事を毎日確認し、数をこなす、という作業は骨が折
 
 ### ER図
 
-<img width="677" alt="image" src="https://github.com/Dingu-suke/portfolio/assets/139987339/ca888270-a73b-4ae2-83c2-362d2df2009d">
+![image](https://github.com/Dingu-suke/portfolio/assets/139987339/87601c32-cbfd-4f0e-b691-d34e31a01f4c)
+
 
 
 - users ユーザー
